@@ -542,7 +542,8 @@ export function SessionRoomLevel({ session, participantName, onLeave }: SessionR
   const socketRef = useRef<Socket | null>(null);
 
   useEffect(() => {
-    const socket = io('http://localhost:3001');
+    const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001';
+    const socket = io(backendUrl);
 
     socket.on('connect', () => {
       setConnected(true);
