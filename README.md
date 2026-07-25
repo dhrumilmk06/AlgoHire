@@ -1,6 +1,6 @@
 <div align="center">
   <!-- You can replace the src below with a custom logo if you have one -->
-  <img src="https://raw.githubusercontent.com/dhrumilmk06/AlgoHire/main/public/vite.svg" alt="AlgoHire Logo" width="120" />
+  <!-- <img src="https://raw.githubusercontent.com/dhrumilmk06/AlgoHire/main/public/vite.svg" alt="AlgoHire Logo" width="120" /> -->
   
   # AlgoHire
   **Revolutionizing DSA Learning & Technical Interviews with 3D Visualization**
