@@ -1,0 +1,49 @@
+# Component Overview
+
+This document provides a breakdown of the components in the `src/components` directory.
+
+## Core Components
+These components handle the main application structure and navigation.
+
+- **Scene.tsx**: The main routing component that switches between different levels (Data Structures, Algorithms, Sandbox) based on the `currentLevel` prop. It manages the mounting of the specific level components.
+- **Menu.tsx**: The sidebar navigation menu. It lists available data structures and algorithms, allowing the user to select the active level. It includes SVG icons for each topic.
+- **InfoModal.tsx**: A modal overlay used to display educational information and complexities (Big O notation) about the current data structure.
+
+## Level Components (Data Structures)
+These are the main interactive views for each specific data structure. They typically contain the 3D Canvas, logic for animations, and the UI controls specific to that level.
+
+- **levels/ArrayLevel.tsx**: Visualization for Arrays. Includes features for access (O(1)) and linear search (O(n)), with a custom input dock and code display.
+- **levels/StackLevel.tsx**: Visualization for Stacks (LIFO).
+- **levels/QueueLevel.tsx**: Visualization for Queues (FIFO).
+- **levels/LinkedListLevel.tsx**: Visualization for Linked Lists. Handles node creation and pointer connections.
+- **levels/HeapLevel.tsx**: Visualization for Heaps (Binary Heap).
+- **TreeLevel.tsx**: Visualization for Trees (Binary Search Trees, etc.).
+- **GraphLevel.tsx**: Visualization for Graphs.
+- **HashTableLevel.tsx**: Visualization for Hash Tables.
+
+## Level Components (Algorithms)
+- **algorithms/SortingLevel.tsx**: Visualizes sorting algorithms (e.g., Bubble Sort, Merge Sort).
+- **algorithms/PathfindingLevel.tsx**: Visualizes pathfinding algorithms (e.g., BFS, DFS) on a grid or graph.
+- **levels/SearchLevel.tsx**: specialized level for visualizing Binary Search and Linear Search algorithms.
+
+## Sandbox & Playground
+- **SandboxLevel.tsx**: A general 3D playground, likely for testing geometry or physics interaction.
+- **levels/ArraySandbox.tsx**: A specific sandbox environment for experimenting with Array interactions.
+
+## 3D Visualization Components (src/components/3d)
+These are React Three Fiber components representing the visual elements in the 3D scene.
+
+- **CameraControls.tsx**: A wrapper around Three.js controls (like OrbitControls or CameraControls) to handle scene navigation (zoom, pan, rotate).
+- **ArrayBox.tsx**: Represents a single element in an array. It displays the value and index, and handles highlight/selection animations.
+- **StackBox.tsx**: Represents a graphical unit for Stack elements.
+- **QueueSphere.tsx**: Represents a graphical unit (sphere) for Queue elements.
+- **LinkedListNode.tsx**: Represents a node in a Linked List.
+- **ConnectionArrow.tsx**: A utility component to draw 3D arrows connecting nodes (used in Linked Lists, Trees, Graphs).
+
+## UI Components (src/components/ui)
+These components provide the 2D user interface overlays.
+
+- **CodeWindow.tsx**: A floating window component used to display code snippets relevant to the current operation (highlighting lines as they execute).
+- **Draggable.tsx**: A utility wrapper to make UI elements draggable.
+- **NavigationControls.tsx**: General global navigation controls.
+- **ArrayControls.tsx** (and similar `StackControls`, `QueueControls` etc.): UI sets for controlling the specific operations of data structures. *Note: Some interactive levels (like ArrayLevel) may implement their own internal UI docks instead of using these separate components.*
