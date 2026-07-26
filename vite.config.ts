@@ -8,5 +8,9 @@ export default defineConfig({
   },
   build: {
     chunkSizeWarningLimit: 2500,
+    sourcemap: false,
+  },
+  css: {
+    devSourcemap: false,
   },
 });

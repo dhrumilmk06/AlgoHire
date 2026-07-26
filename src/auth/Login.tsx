@@ -29,7 +29,7 @@ export const Login = () => {
     };
 
     return (
-        <div className="min-h-screen bg-slate-950 flex items-center justify-center p-4">
+        <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center p-4 gap-6">
             <div className="w-full max-w-md bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl p-8 transform transition-all hover:scale-[1.01] hover:shadow-cyan-900/10">
                 <div className="flex flex-col items-center mb-8">
                     <div className="w-16 h-16 bg-slate-800 rounded-full flex items-center justify-center mb-4 text-cyan-400">
@@ -102,6 +102,23 @@ export const Login = () => {
                         </p>
                     </div>
                 </form>
+            </div>
+
+            {/* Demo credentials outside the card */}
+            <div className="w-full max-w-md p-5 bg-slate-900/40 rounded-2xl text-sm text-slate-400 border border-slate-800/60 backdrop-blur-md shadow-xl">
+                <p className="font-semibold text-slate-300 mb-3 flex items-center justify-center gap-2">
+                    <Eye size={18} className="text-cyan-500" /> Demo Credentials
+                </p>
+                <div className="flex flex-col gap-3">
+                    <div className="flex justify-between items-center bg-slate-950/60 p-3 rounded-xl border border-slate-800/50">
+                        <span className="font-mono text-cyan-400 font-medium">admin@a.com</span>
+                        <span className="font-mono bg-slate-800 px-2.5 py-1 rounded-md text-slate-300 text-xs font-bold tracking-wider">123456</span>
+                    </div>
+                    <div className="flex justify-between items-center bg-slate-950/60 p-3 rounded-xl border border-slate-800/50">
+                        <span className="font-mono text-cyan-400 font-medium">user@u.com</span>
+                        <span className="font-mono bg-slate-800 px-2.5 py-1 rounded-md text-slate-300 text-xs font-bold tracking-wider">123456</span>
+                    </div>
+                </div>
             </div>
         </div>
     );
